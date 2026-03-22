@@ -1,0 +1,14 @@
+vim
+neovim
+git
+eza
+fzf
+zoxide
+zellij
+yazi
+bat
+btop
+htop
+fastfetch
+ripgrep
+fd
