@@ -5,10 +5,12 @@
 .viminfo
 
 # folders
+.git
 .vscode
 raycast
 Duplicati
 .oh-my-zsh
+.mono
 rclone
 darktable
 git
@@ -22,4 +24,6 @@ stormy
 zed
 zellij
 gh
+gtk-3.0
+gitui
 
