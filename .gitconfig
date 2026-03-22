@@ -1,0 +1,9 @@
+[user]
+	name = Jaden Accord
+	email = dev@jadenaccord.com
+[pull]
+	rebase = true
+[core]
+	excludesfile = $HOME/.globalgitignore
+[init]
+	defaultBranch = main
