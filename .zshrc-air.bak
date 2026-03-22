@@ -1,0 +1,102 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Add ~/.cargo/bin to PATH
+export PATH=$HOME/.cargo/bin:$PATH
+
+# Add ~/go to PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git rust safe-paste aliases brew)
+
+source $ZSH/oh-my-zsh.sh
+
+# *** User configuration ***
+
+# Disable mail check
+MAILCHECK=0
+unset MAIL
+setopt NO_MAIL_WARNING
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
+
+# ALIASES
+# For a full list of active aliases, run `alias`.
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh/"
+alias yabaiconfig="nvim ~/.config/yabai/yabairc && yabai --restart-service"
+alias yabaistop="yabai --stop-service"
+alias yabaistart="yabai --start-service"
+alias yabairestart="yabai --restart-service"
+alias spotify="spotify_player"
+
+alias ls="eza -a --icons --hyperlink"
+alias l="eza -lah --icons --hyperlink"
+alias la="eza -lAh --icons --hyperlink"
+alias ll="eza -lh --icons --hyperlink"
+alias lg="eza -lah --icons --hyperlink --git"
+
+alias mount-aephoto="rclone mount b2:/AE-Photo ~/B2/AE-Photo -v"
+
+alias most-used-commands="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
+alias brew-list-installed="(brew list --installed-on-request && brew list --casks -1) | sort"
+
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
+
+# Environment variables
+export XDG_CONFIG_HOME="$HOME/.config"
+export EDITOR="/opt/homebrew/bin/nvim"
+
+# Use vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Disable auto cd
+unsetopt autocd
+
+# Set up zoxide to replace cd
+eval "$(zoxide init --cmd="cd" zsh)"
