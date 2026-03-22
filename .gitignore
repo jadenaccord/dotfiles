@@ -1,9 +1,24 @@
+# files
 .DS_Store
-.vscode
 *.log
 .env
+.viminfo
+
+# folders
+.vscode
 raycast
-duplicati
-fontforge
-oh-my-zsh
+Duplicati
+.oh-my-zsh
+rclone
+darktable
+git
+glow
+btop
+htop
+karabiner
+mole
+spotify-player
+stormy
+zed
+zellij
 
