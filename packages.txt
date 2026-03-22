@@ -4,6 +4,7 @@ git
 eza
 fzf
 zoxide
+stow
 zellij
 yazi
 bat
@@ -12,3 +13,6 @@ htop
 fastfetch
 ripgrep
 fd
+gitui
+just
+tree
