@@ -1,9 +1,10 @@
 # Dotfiles
 
-Dotfiles for cross-platform use.
+Dotfiles for cross-platform use, with `stow`.
 
 ## Tree
 
+```
 .
 ├── .config
 │   ├── bat
@@ -40,5 +41,5 @@ Dotfiles for cross-platform use.
 ├── .zshrc-air.bak
 ├── packages.txt
 └── README.md
+```
 
-11 directories, 26 files
