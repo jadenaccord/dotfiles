@@ -10,8 +10,8 @@ shell-integration = zsh
 
 # theme
 #theme = Gruvbox Dark
-theme = Flexoki Dark
-#theme = light:Flexoki Light,dark:Flexoki Dark
+#theme = Flexoki Dark
+theme = light:Flexoki Light,dark:Flexoki Dark
 
 # macOS icon GruvBox
 #macos-icon = custom-style
