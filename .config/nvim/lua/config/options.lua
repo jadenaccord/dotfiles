@@ -6,7 +6,7 @@ vim.o.linebreak = true
 vim.o.cursorline = true
 vim.o.splitbelow = true
 vim.o.splitright = true
-vim.o.termguicolors = true
+vim.o.termguicolors = false
 
 -- Tabs/indents
 vim.o.tabstop = 4
