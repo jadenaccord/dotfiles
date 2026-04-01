@@ -3,15 +3,17 @@
 #font-family = Berkeley Mono, TX-02-Data, JetBrainsMono Nerd Font
 font-family = TX-02-Data
 window-title-font-family = TX-02-Data
-font-size = 14
+font-size = 16
 
 # shell
 shell-integration = zsh
 
 # theme
-#theme = Gruvbox Dark
-#theme = Flexoki Dark
-theme = light:Flexoki Light,dark:Flexoki Dark
+theme = Gruvbox Dark
+# theme = Flexoki Dark
+# theme = light:Flexoki Light,dark:Flexoki Dark
+# palette = 0=#FFFCF0
+# palette = 15=#100F0F
 
 # macOS icon GruvBox
 #macos-icon = custom-style
