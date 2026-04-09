@@ -1,13 +1,17 @@
 vim.pack.add({ 'https://github.com/echasnovski/mini.nvim' })
 
-require('mini.statusline').setup()
-require('mini.tabline').setup()
-require('mini.icons').setup()
-require('mini.git').setup()
-require('mini.diff').setup()
-require('mini.pick').setup()
-require('mini.files').setup()
-require('mini.pairs').setup()
+-- Modules
+require('mini.statusline').setup()  -- status bar
+require('mini.tabline').setup()     -- tab
+require('mini.icons').setup()       -- icons
+require('mini.git').setup()         -- git integration (e.g. in number column)
+require('mini.diff').setup()        -- diffs
+require('mini.pick').setup()        -- various pickers (files, buffers, etc.)
+require('mini.files').setup()       -- file explorer
+require('mini.pairs').setup()       -- auto pair brackets etc.
+-- require('mini.completion').setup()  -- completions
+-- require('mini.snippets').setup() -- snippets
+-- show next key (keymap) clues:
 require('mini.clue').setup({
   triggers = {
     -- Leader triggers
