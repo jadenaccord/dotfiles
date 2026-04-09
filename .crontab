@@ -1,0 +1,5 @@
+# .crontab
+# format: minute hour day month weekday
+# example: `0 0 * * *` every day at 00:00
+
+0 0 * * * ~/dev/bin/obsidian-update-day
