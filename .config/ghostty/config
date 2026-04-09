@@ -9,8 +9,8 @@ font-size = 16
 shell-integration = zsh
 
 # theme
-theme = Gruvbox Dark
-# theme = Flexoki Dark
+# theme = Gruvbox Dark
+theme = Flexoki Dark
 # theme = light:Flexoki Light,dark:Flexoki Dark
 # palette = 0=#FFFCF0
 # palette = 15=#100F0F
