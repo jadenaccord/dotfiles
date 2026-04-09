@@ -18,6 +18,8 @@ source $ZSH/oh-my-zsh.sh
 # .zshrc is only for interactive shell sessions
 # See also .zshprofile for env variables set at login shell
 
+export OBSIDIANVAULT="$HOME/Obsidian/obsidian-vault-2025"
+
 # ALIASES
 # For a full list of active aliases, run `alias`.
 alias zshconfig="$EDITOR $ZSHRC"

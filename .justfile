@@ -32,6 +32,9 @@ push msg="manual commit":
 obsidian:
     zellij attach obsidian
 
+cron:
+    crontab ~/.crontab
+
 # open "dev" session in zellij
 dev:
     zellij attach dev
