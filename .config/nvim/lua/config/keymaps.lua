@@ -13,8 +13,10 @@ map('n', '<Leader>qa', ':qa<CR>', { desc = 'Quit all' })
 map('n', '<Tab>', ':bnext<CR>', { silent = true, desc = 'Next buffer' })
 map('n', '<S-Tab>', ':bprev<CR>', { silent = true, desc = 'Previous buffer' })
 
-map('n', '<Leader>cv', ':e ~/.config/nvim/', { desc = 'Open nvim config' })
-map('n', '<Leader>cz', ':e $ZSHRC', { desc = 'Open .zshrc' })
+-- Quick open configs
+map('n', '<Leader>cv', ':e $HOME/.config/nvim/<CR>', { desc = 'Open nvim config' })
+map('n', '<Leader>cz', ':e $ZSHRC<CR>', { desc = 'Open .zshrc' })
+map('n', '<Leader>cg', ':e $HOME/.config/ghostty/config<CR>', { desc = 'Open Ghostty config' })
 
 -- Visual <j> and <k>
 vim.keymap.set({'n', 'x'}, 'j', 'gj', { noremap = true, silent = true })
