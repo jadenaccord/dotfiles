@@ -1,9 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Prompt
-add_newline = true
-# format = '$all' # default
-format = '$all'
+add_newline = false
+format = '$all' # default
 
 [directory]
 truncation_length = 1
@@ -16,11 +15,43 @@ use_logical_path = false
 symbol = ''
 format = '[\($symbol$branch(:$remote_branch)\)]($style) '
 
+[git_status]
+conflicted = 'U'
+ahead = '↑'
+behind = '↓'
+diverged = '↕'
+up_to_date = ''
+untracked = '?'
+stashed = 'S'
+modified = 'M'
+staged = '+'
+# staged = 'A'
+renamed = 'R'
+deleted = 'D'
+typechanged = 'T'
+
 [line_break]
 disabled = true
 
 [character]
-success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
+# success_symbol = '[➜](bold green)'
+# error_symbol = '[➜](bold red)'
 # error_symbol = '[✗](bold red) '
+success_symbol = '[→](bold green)'
+error_symbol = '[→](bold red)'
+vimcmd_symbol = '[←](bold blue)'
+# The following only work in fish shell
+# vimcmd_replace_one_symbol = '[←](bold purple)'
+# vimcmd_replace_symbol = '[←](bold purple)'
+# vimcmd_visual_symbol = '[←](bold yellow)'
+
+[custom.obsidian]
+detect_folders = ['.obsidian']
+format = '󰍔 '
+
+[custom.claude]
+detect_folders = ['.claude']
+detect_files = ['CLAUDE.md']
+# format = ' '
+format = '✧ '
 
