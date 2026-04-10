@@ -1,0 +1,8 @@
+/nix/
+/System/
+/Library/
+/private/
+/usr/
+/Users/jaden/Library/*
+/Users/jaden/!/Library/CloudStorage/
+/Users/jaden/**/*.photoslibrary/
