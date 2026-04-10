@@ -1,0 +1,26 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Prompt
+add_newline = true
+# format = '$all' # default
+format = '$all'
+
+[directory]
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+use_logical_path = false
+
+[git_branch]
+# symbol = ' '
+# symbol = ' '
+symbol = ''
+format = '[\($symbol$branch(:$remote_branch)\)]($style) '
+
+[line_break]
+disabled = true
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+# error_symbol = '[✗](bold red) '
+

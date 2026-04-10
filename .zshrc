@@ -58,6 +58,8 @@ export KEYTIMEOUT=1
 # Disable auto cd
 unsetopt autocd
 
+# Starship prompt
+eval "$(starship init zsh)"
 # Replace cd with zoxide
 eval "$(zoxide init --cmd="cd" zsh)"
 
