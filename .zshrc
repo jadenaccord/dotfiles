@@ -43,11 +43,11 @@ alias ffd='cd "$(find . -type d | fzf --preview '"'"'ls {}'"'"' --style minimal)
 alias ffh='print -z $(fc -lnr 1 | awk '\''!seen[$0]++'\'' | fzf)'
 alias f="fff"
 # zellij
-alias newzellij="zellij -l welcome"
+alias zellijnew="zellij -l welcome"
 
 # MACOS
 # List packages installed manually with brew
-alias brew-list-installed="(brew list --installed-on-request && brew list --casks -1) | sort"
+alias brewlist="(brew list --installed-on-request && brew list --casks -1) | sort"
 # cd to iCloud directory
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
