@@ -17,9 +17,10 @@ format = '[\($symbol$branch(:$remote_branch)\)]($style) '
 
 [git_status]
 conflicted = 'U'
-ahead = '↑'
-behind = '↓'
-diverged = '↕'
+ahead = '↑$count'
+behind = '↓$count'
+# diverged = '↕'
+diverged = '↓$behind_count↑$ahead_count'
 up_to_date = ''
 untracked = '?'
 stashed = 'S'
