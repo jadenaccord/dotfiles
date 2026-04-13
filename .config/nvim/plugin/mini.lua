@@ -9,9 +9,9 @@ require('mini.diff').setup()        -- diffs
 require('mini.pick').setup()        -- various pickers (files, buffers, etc.)
 require('mini.files').setup()       -- file explorer
 require('mini.pairs').setup()       -- auto pair brackets etc.
--- require('mini.completion').setup()  -- completions
--- require('mini.snippets').setup() -- snippets
--- show next key (keymap) clues:
+require('mini.completion').setup()  -- completions
+-- require('mini.snippets').setup()    -- snippets
+-- Show next key (keymap) clues:
 require('mini.clue').setup({
   triggers = {
     -- Leader triggers
@@ -79,4 +79,8 @@ hl(0, 'MiniTablineCurrent', { ctermfg = 15, ctermbg = 0 })
 hl(0, 'MiniTablineVisible', { ctermfg = 7, ctermbg = 0 })
 hl(0, 'MiniTablineHidden', { ctermfg = 8, ctermbg = 0 })
 -- hl(0, 'MiniTablineModifiedCurrent', { ctermfg = 1, ctermbg = 0 })
+hl(0, 'Pmenu', { ctermfg = 0, ctermbg = 8 })
+hl(0, 'PmenuSel', { ctermfg = 0, ctermbg = 15 })
+hl(0, 'PmenuSbar', { ctermbg = 8 })
+hl(0, 'PmenuThumb', { ctermbg = 7 })
 
