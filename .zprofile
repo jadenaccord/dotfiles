@@ -8,4 +8,6 @@ export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
 export LANG=en_US.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=30
 
