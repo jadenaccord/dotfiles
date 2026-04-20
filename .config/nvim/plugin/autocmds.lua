@@ -26,10 +26,18 @@ autocmd('VimResized', {
 })
 
 -- Enable line wrapping for text files
-autocmd('FileType', { 
+autocmd('FileType', {
   pattern = { 'markdown', 'typst' },
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.linebreak = true  -- wrap at word boundaries
   end,
+})
+
+-- Autosave Typst documents for preview
+autocmd({"TextChanged", "TextChangedI"}, {
+    pattern = { "*.typ" },
+    callback = function()
+        vim.cmd("silent! write")
+    end,
 })
