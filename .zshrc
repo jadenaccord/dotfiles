@@ -29,10 +29,10 @@ alias ghosttyconfig="$EDITOR $HOME/.config/ghostty/config"
 alias most="fc -ln 1 | sort | uniq -c | sort -nr | head -25"
 # Replace ls with eza
 alias ls="eza -a --icons --hyperlink"
-alias l="eza -lah --icons --hyperlink"
-alias la="eza -lAh --icons --hyperlink"
-alias ll="eza -lh --icons --hyperlink"
-alias lg="eza -lah --icons --hyperlink --git"
+alias l="eza -lah --icons --hyperlink --group-directories-first"
+alias la="eza -lAh --icons --hyperlink --group-directories-first"
+alias ll="eza -lh --icons --hyperlink --group-directories-first"
+alias lg="eza -lah --icons --hyperlink --git --group-directories-first"
 alias lf="eza -lahf --icons --hyperlink"
 alias ld="eza -lahD --icons --hyperlink"
 # zoxide
@@ -44,10 +44,20 @@ alias ffh='print -z $(fc -lnr 1 | awk '\''!seen[$0]++'\'' | fzf)'
 alias f="fff"
 # zellij
 alias zellijnew="zellij -l welcome"
+# git
+alias gs="git status -s"
+alias gd="git diff"
+alias gl="git log --oneline --graph --decorate --all"
+alias gc="git commit -m"
+# obsidian
+alias oh="obsidian help | bat"
+alias od="obsidian daily:read"
+alias odt="obsidian tasks daily"
+alias oda="obsidian daily:append content="
+# brew
+alias brewlist="(brew list --installed-on-request && brew list --casks -1) | sort"
 
 # MACOS
-# List packages installed manually with brew
-alias brewlist="(brew list --installed-on-request && brew list --casks -1) | sort"
 # cd to iCloud directory
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
