@@ -12,6 +12,7 @@ vim.o.signcolumn = "yes"
 vim.o.showmatch = true
 vim.o.cmdheight = 1
 vim.o.showmode = false
+vim.o.guifont = "JetBrainsMono Nerd Font:h14"
 
 -- Tabs/indents
 vim.o.tabstop = 4
