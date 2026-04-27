@@ -1,22 +1,31 @@
-# ***STANDARD CONFIG***
-# Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-export ZSHRC="$HOME/.zshrc"
-
-# Set zsh theme
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Load plugins
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-# safe-paste: disables automatically running pasted commands
-plugins=(safe-paste)
-
-source $ZSH/oh-my-zsh.sh
-
-# ***USER CONFIG***
 # .zshrc is only for interactive shell sessions
 # See also .zshprofile for env variables set at login shell
+
+export ZSHRC="$HOME/.zshrc"
+[[ -d ~/.local/bin ]] && path=(~/.local/bin $path)
+
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY HIST_IGNORE_DUPS HIST_IGNORE_SPACE HIST_VERIFY EXTENDED_HISTORY
+bindkey '^R' history-incremental-search-backward
+
+# Sensible defaults
+setopt AUTO_CD EXTENDED_GLOB INTERACTIVE_COMMENTS NO_BEEP
+export CLICOLOR=1
+
+# Completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Safe paste (replaces omz safe-paste plugin)
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
+# Helper functions
+take() { mkdir -p "$1" && cd "$1"; }
 
 export OBSIDIANVAULT="$HOME/Obsidian/obsidian-vault-2025"
 
