@@ -1,30 +1,18 @@
 # font
-#font-family = DepartureMono Nerd Font
-#font-family = Berkeley Mono, TX-02-Data, JetBrainsMono Nerd Font
-font-family = TX-02-Data
-window-title-font-family = TX-02-Data
+font-family = Lilex Nerd Font
 font-size = 16
 
 # shell
 shell-integration = zsh
 
 # theme
-# theme = Gruvbox Dark
-theme = Flexoki Dark
-# theme = light:Flexoki Light,dark:Flexoki Dark
-# palette = 0=#FFFCF0
-# palette = 15=#100F0F
+theme = light:Flexoki Light,dark:Flexoki Dark
 
 # macOS icon GruvBox
 #macos-icon = custom-style
 #macos-icon-frame = beige
 #macos-icon-ghost-color = #ebdbb2
 #macos-icon-screen-color = #282828
-
-# macOS icon Flexoki
-#macos-icon = custom-style
-#macos-icon-ghost-color = #879A39
-#macos-icon-screen-color = #100F0F
 
 # macOS specific
 macos-non-native-fullscreen = true
