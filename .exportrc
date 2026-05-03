@@ -1,0 +1,4 @@
+export ZSHRC="$HOME/.zshrc"
+export ALIASRC="$HOME/.aliasrc"
+export EXPORTRC="$HOME/.exportrc"
+export OBSIDIANVAULT="$HOME/Obsidian/obsidian-vault-2025"
