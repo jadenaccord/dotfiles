@@ -6,64 +6,7 @@ require('mini.tabline').setup()     -- tab
 require('mini.icons').setup()       -- icons
 require('mini.git').setup()         -- git integration (e.g. in number column)
 require('mini.diff').setup()        -- diffs
-require('mini.pick').setup()        -- various pickers (files, buffers, etc.)
-require('mini.files').setup()       -- file explorer
 require('mini.pairs').setup()       -- auto pair brackets etc.
-require('mini.completion').setup()  -- completions
--- require('mini.snippets').setup()    -- snippets
--- Show next key (keymap) clues:
-require('mini.clue').setup({
-  triggers = {
-    -- Leader triggers
-    { mode = { 'n', 'x' }, keys = '<Leader>' },
-
-    -- `[` and `]` keys
-    { mode = 'n', keys = '[' },
-    { mode = 'n', keys = ']' },
-
-    -- Built-in completion
-    { mode = 'i', keys = '<C-x>' },
-
-    -- `g` key
-    { mode = { 'n', 'x' }, keys = 'g' },
-
-    -- Marks
-    { mode = { 'n', 'x' }, keys = "'" },
-    { mode = { 'n', 'x' }, keys = '`' },
-
-    -- Registers
-    { mode = { 'n', 'x' }, keys = '"' },
-    { mode = { 'i', 'c' }, keys = '<C-r>' },
-
-    -- Window commands
-    { mode = 'n', keys = '<C-w>' },
-
-    -- `z` key
-    { mode = { 'n', 'x' }, keys = 'z' },
-  },
-  clues = {
-    -- Enhance this by adding descriptions for <Leader> mapping groups
-  },
-  window = {
-    delay = 300,
-  }
-})
-require('mini.clue').config.clues = {
-    MiniClue.gen_clues.square_brackets(),
-    MiniClue.gen_clues.builtin_completion(),
-    MiniClue.gen_clues.windows(),
-    MiniClue.gen_clues.g(),
-    MiniClue.gen_clues.marks(),
-    MiniClue.gen_clues.registers(),
-    MiniClue.gen_clues.z(),
-}
-
--- Keymaps
-local map = vim.keymap.set
-map('n', '<Leader>ff', MiniPick.builtin.files, { desc = 'Pick files' })
-map('n', '<Leader>fg', MiniPick.builtin.grep_live, { desc = 'Pick grep' })
-map('n', '<Leader>fb', MiniPick.builtin.buffers, { desc = 'Pick buffers' })
-map('n', '<Leader>e', MiniFiles.open, { desc = 'File explorer' })
 
 -- Highlights
 local hl = vim.api.nvim_set_hl
@@ -75,10 +18,12 @@ hl(0, 'MiniStatuslineDevinfo', { ctermfg = 7, ctermbg = 0 })
 hl(0, 'MiniStatuslineFilename', { ctermfg = 0, ctermbg = 7 })
 hl(0, 'MiniStatuslineFileinfo', { ctermfg = 7, ctermbg = 0 })
 hl(0, 'MiniStatuslineInactive', { ctermfg = 8, ctermbg = 0 })
-hl(0, 'MiniTablineCurrent', { ctermfg = 15, ctermbg = 0 })
-hl(0, 'MiniTablineVisible', { ctermfg = 7, ctermbg = 0 })
-hl(0, 'MiniTablineHidden', { ctermfg = 8, ctermbg = 0 })
--- hl(0, 'MiniTablineModifiedCurrent', { ctermfg = 1, ctermbg = 0 })
+hl(0, 'MiniTablineCurrent', { ctermfg = 15, ctermbg = 4 })
+hl(0, 'MiniTablineModifiedCurrent', { ctermfg = 9, ctermbg = 4 })
+hl(0, 'MiniTablineVisible', { ctermfg = 0, ctermbg = 15 })
+hl(0, 'MiniTablineModifiedVisible', { ctermfg = 9, ctermbg = 15 })
+hl(0, 'MiniTablineHidden', { ctermfg = 7, ctermbg = 15 })
+hl(0, 'MiniTablineModifiedHidden', { ctermfg = 1, ctermbg = 15 })
 hl(0, 'Pmenu', { ctermfg = 0, ctermbg = 8 })
 hl(0, 'PmenuSel', { ctermfg = 0, ctermbg = 15 })
 hl(0, 'PmenuSbar', { ctermbg = 8 })

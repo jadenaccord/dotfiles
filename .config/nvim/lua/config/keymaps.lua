@@ -13,6 +13,11 @@ map('n', '<Leader>qa', ':qa<CR>', { desc = 'Quit all' })
 map('n', '<Tab>', ':bnext<CR>', { silent = true, desc = 'Next buffer' })
 map('n', '<S-Tab>', ':bprev<CR>', { silent = true, desc = 'Previous buffer' })
 
+-- Close buffer
+map('n', '<Leader>bd', ':bd<CR>', { silent = true, desc = 'Close buffer' })
+map('n', '<Leader>bn', ':ene<CR>', { silent = true, desc = 'Open empty buffer' })
+map('n', '<Leader>bo', ':e ', { silent = true, desc = 'Open file' })
+
 -- Quick open configs
 map('n', '<Leader>cv', ':e $HOME/.config/nvim/<CR>', { desc = 'Open nvim config' })
 map('n', '<Leader>cz', ':e $ZSHRC<CR>', { desc = 'Open .zshrc' })

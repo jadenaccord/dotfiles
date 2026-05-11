@@ -41,6 +41,6 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.mouse = 'a'
 vim.o.updatetime = 300
 -- vim.o.timeoutlen = 500
--- vim.o.autocomplete = true
-vim.o.completeopt = {'menu', 'menuone', 'noselect', 'fuzzy'}
+vim.o.autocomplete = true
+vim.o.completeopt = "menu,menuone,noselect,fuzzy"
 
