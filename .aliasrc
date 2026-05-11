@@ -18,7 +18,9 @@ alias z="zoxide query"
 # fzf
 alias fff="fzf --multi --preview 'bat --color=always {}' --style minimal --bind 'enter:become(nvim {+})'"
 alias ffd='cd "$(find . -type d | fzf --preview '"'"'ls {}'"'"' --style minimal)"'
+alias ffz='cd "$(z -l | fzf --preview '"'"'ls {}'"'"' --style minimal)"'
 alias ffh='print -z $(fc -lnr 1 | awk '\''!seen[$0]++'\'' | fzf)'
+alias fft='tmux attach -t "$(tmux ls | fzf --style=minimal --height=25% --layout=reverse | awk -F: "{print \$1}")"'
 alias f="fff"
 # git
 alias gs="git status -s"
