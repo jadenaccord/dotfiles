@@ -34,6 +34,8 @@ alias odt="obsidian tasks daily"
 alias oda="obsidian daily:append content="
 # brew
 alias brewlist="(brew list --installed-on-request && brew list --casks -1) | sort"
+# yt-dlp
+alias yt-mp3="yt-dlp -x --audio-format mp3 --audio-quality 0"
 
 # MACOS
 # cd to iCloud directory
